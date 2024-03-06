@@ -2,11 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   background-color: #000814;
   color: whitesmoke;
 }
 
-.active{
-  color: #B69507
+.active {
+  color: #b69507;
 }
+
+.bg-effect .active {
+  background-color: #313946;
+}
+
