@@ -7,9 +7,8 @@ const Sidebar = () => {
       <div className="text-[1.2rem] font-semibold text-center">
         <div className="mb-4 bg-effect">
           <NavLink
-            to="/buttons"
+            to="/button"
             className="text-white block p-3 rounded-md border border-gray-700 hover:bg-[#313946] hover:border-transparent transition duration-300"
-            activeClassName="bg-gray-700"
           >
             Buttons
           </NavLink>
@@ -18,7 +17,6 @@ const Sidebar = () => {
           <NavLink
             to="/accordion"
             className="text-white block p-3 rounded-md border border-gray-700 hover:bg-[#313946] hover:border-transparent transition duration-300"
-            activeClassName="bg-gray-700"
           >
             Accordion
           </NavLink>
@@ -27,7 +25,6 @@ const Sidebar = () => {
           <NavLink
             to="/navbar"
             className="text-white block p-3 rounded-md border border-gray-700 hover:bg-[#313946] hover:border-transparent transition duration-300"
-            activeClassName="bg-gray-700"
           >
             Navbar
           </NavLink>
