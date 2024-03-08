@@ -25,7 +25,7 @@ const Button = () => {
     }, 3000);
   };
   return (
-    <div className="flex mt-10 mx-auto flex-col">
+    <div className="flex mx-auto flex-col border-l-2 border-white min-h-screen pt-10">
       <div className="flex flex-col gap-5 border-b-2 border-white w-full pb-10">
         <div className="mx-auto flex items-center">
           <input
@@ -80,7 +80,7 @@ const Button = () => {
               </button>
             </div>
           </div>
-          <div className="bg-gray-800 rounded-md mt-5">
+          <div className="bg-gray-700 rounded-md mt-5">
             <div className="flex justify-between items-center py-3 px-5">
               <h2 className="text-white font-bold">The code for the button</h2>
               <button
@@ -97,7 +97,7 @@ const Button = () => {
                 <code className="text-sm">
                   {`<button class="px-4 py-2 rounded-md bg-${color} text-white hover:bg-yellow-700 transition duration-300 hover:opacity-75">
   Pick a Color
-  </button>`}
+</button>`}
                 </code>
               </pre>
             </div>

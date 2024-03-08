@@ -1,11 +1,10 @@
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Button from "./components/Buttons/Button";
+import Accordion from "./components/Accordion/Accordion";
 
 function App() {
-
   return (
     <>
       <BrowserRouter>
@@ -15,6 +14,7 @@ function App() {
           <div className="flex-1">
             <Routes>
               <Route path="/button" element={<Button />} />
+              <Route path="/accordion" element={<Accordion />} />
             </Routes>
           </div>
         </div>
