@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Button from "./components/Buttons/Button";
 import Accordion from "./components/Accordion/Accordion";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Routes>
               <Route path="/button" element={<Button />} />
               <Route path="/accordion" element={<Accordion />} />
+              <Route path="/navbar" element={<Navbar/>} />
             </Routes>
           </div>
         </div>

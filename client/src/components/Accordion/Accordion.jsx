@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Accordion = () => {
   const [activeIndex, setActiveIndex] = useState(null);
-  const [coppyMessage, setCopyMessage] = useState(false);
+  const [copyMessage, setCopyMessage] = useState(false);
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -117,7 +117,7 @@ export default Accordion;`;
               } px-3 py-1 rounded-md`}
               onClick={handleCopyClick}
             >
-              {coppyMessage ? "Copied" : "Copy"}
+              {copyMessage ? "Copied" : "Copy"}
             </button>
           </div>
           <div className="bg-[#333] border border-gray-300 rounded-md p-4 overflow-auto text-white sm ">

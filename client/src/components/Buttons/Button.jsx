@@ -5,7 +5,7 @@ const Button = () => {
   const [color, setColor] = useState("#000000");
   const [showColorPicker, setShowColorPicker] = useState(false);
   const [showButton, setShowButton] = useState(false);
-  const [coppyMessage, setCopyMessage] = useState(false);
+  const [copyMessage, setCopyMessage] = useState(false);
 
   const toggleColorPicker = () => {
     setShowColorPicker(!showColorPicker);
@@ -85,7 +85,7 @@ const Button = () => {
               <h2 className="text-white font-bold">The code for the button</h2>
               <button
                 className={`text-white ${
-                  coppyMessage ? "bg-green-500" : "bg-yellow-600"
+                  copyMessage ? "bg-green-500" : "bg-yellow-600"
                 } px-3 py-1 rounded-md`}
                 onClick={handleCopyClick}
               >
