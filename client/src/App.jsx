@@ -5,6 +5,7 @@ import Button from "./components/Buttons/Button";
 import Accordion from "./components/Accordion/Accordion";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path="/button" element={<Button />} />
               <Route path="/accordion" element={<Accordion />} />
               <Route path="/navbar" element={<Navbar/>} />
+              <Route path="/register" element={<Register/>} />
               <Route path="/login" element={<Login/>} />
             </Routes>
           </div>
