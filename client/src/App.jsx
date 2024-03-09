@@ -9,6 +9,7 @@ import Register from "./components/Register/Register";
 import Footer from "./components/Footer/Footer";
 import Spinner from "./components/Spinner/Spinner";
 import Contact from "./components/Contact/Contact";
+import Card from "./components/Card/Card";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               <Route path="/footer" element={<Footer />} />
               <Route path="/Spinner" element={<Spinner />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/card" element={<Card/>} />
             </Routes>
           </div>
         </div>

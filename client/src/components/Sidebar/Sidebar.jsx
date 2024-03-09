@@ -69,6 +69,14 @@ const Sidebar = () => {
             Contact
           </NavLink>
         </div>
+        <div className="mb-4 bg-effect">
+          <NavLink
+            to="/card"
+            className="text-white block p-3 rounded-md border border-gray-700 hover:bg-[#313946] hover:border-transparent transition duration-300"
+          >
+            Card
+          </NavLink>
+        </div>
       </div>
     </div>
   );
