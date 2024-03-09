@@ -29,6 +29,22 @@ const Sidebar = () => {
             Navbar
           </NavLink>
         </div>
+        <div className="mb-4 bg-effect">
+          <NavLink
+            to="/register"
+            className="text-white block p-3 rounded-md border border-gray-700 hover:bg-[#313946] hover:border-transparent transition duration-300"
+          >
+            Register
+          </NavLink>
+        </div>
+        <div className="mb-4 bg-effect">
+          <NavLink
+            to="/login"
+            className="text-white block p-3 rounded-md border border-gray-700 hover:bg-[#313946] hover:border-transparent transition duration-300"
+          >
+            Login
+          </NavLink>
+        </div>
       </div>
     </div>
   );

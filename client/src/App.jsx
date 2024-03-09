@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Button from "./components/Buttons/Button";
 import Accordion from "./components/Accordion/Accordion";
 import Navbar from "./components/Navbar/Navbar";
+import Login from "./components/Login/Login";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Route path="/button" element={<Button />} />
               <Route path="/accordion" element={<Accordion />} />
               <Route path="/navbar" element={<Navbar/>} />
+              <Route path="/login" element={<Login/>} />
             </Routes>
           </div>
         </div>
