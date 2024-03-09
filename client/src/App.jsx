@@ -8,6 +8,7 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Footer from "./components/Footer/Footer";
 import Spinner from "./components/Spinner/Spinner";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -20,11 +21,12 @@ function App() {
             <Routes>
               <Route path="/button" element={<Button />} />
               <Route path="/accordion" element={<Accordion />} />
-              <Route path="/navbar" element={<Navbar/>} />
-              <Route path="/register" element={<Register/>} />
-              <Route path="/login" element={<Login/>} />
-              <Route path="/footer" element={<Footer/>} />
-              <Route path="/Spinner" element={<Spinner/>} />
+              <Route path="/navbar" element={<Navbar />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/footer" element={<Footer />} />
+              <Route path="/Spinner" element={<Spinner />} />
+              <Route path="/contact" element={<Contact />} />
             </Routes>
           </div>
         </div>
