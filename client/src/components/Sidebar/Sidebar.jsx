@@ -45,6 +45,14 @@ const Sidebar = () => {
             Login
           </NavLink>
         </div>
+        <div className="mb-4 bg-effect">
+          <NavLink
+            to="/footer"
+            className="text-white block p-3 rounded-md border border-gray-700 hover:bg-[#313946] hover:border-transparent transition duration-300"
+          >
+            Footer
+          </NavLink>
+        </div>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ import Accordion from "./components/Accordion/Accordion";
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/navbar" element={<Navbar/>} />
               <Route path="/register" element={<Register/>} />
               <Route path="/login" element={<Login/>} />
+              <Route path="/footer" element={<Footer/>} />
             </Routes>
           </div>
         </div>
