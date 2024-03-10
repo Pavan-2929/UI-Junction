@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { incrementCountFunction } from "../../redux/reducers/copySlice";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [copyMessage, setCopyMessage] = useState(false);
+  const dispatch = useDispatch()
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -83,6 +86,7 @@ export default Navbar;`;
   const handleCopyClick = () => {
     navigator.clipboard.writeText(codeSnippet);
     setCopyMessage(true);
+    incrementCountFunction(dispatch)
     setTimeout(() => {
       setCopyMessage(false);
     }, 3000);
@@ -101,7 +105,7 @@ export default Navbar;`;
             <div className="md:flex justify-around items-center">
               <div className="text-[2rem] flex justify-around items-center relative">
                 <span className="text-yellow-600 animate-fire">
-                  SkillsCrafters
+                  UI-Junction
                 </span>
                 <div onClick={toggleMenu} className="md:hidden">
                   {isMenuOpen ? <FaTimes /> : <FaBars />}
@@ -146,7 +150,7 @@ export default Navbar;`;
             <h2 className="text-white font-bold">The code for the Navbar</h2>
             <button
               className={`text-white ${
-                true ? "bg-green-500" : "bg-yellow-600"
+                copyMessage ? "bg-green-500" : "bg-yellow-600"
               } px-3 py-1 rounded-md`}
               onClick={handleCopyClick}
             >

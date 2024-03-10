@@ -32,11 +32,11 @@ const Feedback = () => {
   };
 
   return (
-    <div className="flex justify-center pt-8 h-screen">
-      <div className="w-full max-w-md">
+    <div className="mx-auto pt-14 h-screen flex justify-center">
+      <div className="">
         <form
           onSubmit={handleSubmit}
-          className="bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          className="bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-[40vw] ml-auto "
         >
           <h1 className="text-3xl font-semibold text-gray-300 mb-8 text-center">
             Give Your Valuable Feedback

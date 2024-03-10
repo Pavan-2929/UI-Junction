@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const Home = () => {
+  const [count, setCount] = useState("");
+
+  const getCount = async () => {
+    try {
+      const response = await axios.get("http://localhost:3000/api/count/get");
+
+      console.log(response);
+      setCount(response.data.count);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getCount();
+  }, []);
+
   return (
     <div className="flex items-center justify-center py-20 text-white border-l-2 border-white">
       <div className="max-w-lg text-center">
         <h1 className="text-4xl font-bold mb-8">
           Welcome to <span className="text-yellow-400">UI-Junction</span>
         </h1>
+        <p className="text-2xl font-bold mb-8">
+          Total Copied components {count}
+        </p>
         <p className="text-lg mb-6">
           Your one-stop destination for{" "}
           <span className="text-yellow-400">React + Tailwind CSS</span>{" "}

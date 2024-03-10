@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { incrementCountFunction } from "../../redux/reducers/copySlice";
 
 const Accordion = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [copyMessage, setCopyMessage] = useState(false);
+  const dispatch = useDispatch();
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -80,6 +83,7 @@ export default Accordion;`;
 
   const handleCopyClick = () => {
     navigator.clipboard.writeText(coppySnippet);
+    incrementCountFunction(dispatch);
     setCopyMessage(true);
     setTimeout(() => {
       setCopyMessage(false);
@@ -113,7 +117,7 @@ export default Accordion;`;
             <h2 className="text-white font-bold">The code for the button</h2>
             <button
               className={`text-white ${
-                true ? "bg-green-500" : "bg-yellow-600"
+                copyMessage ? "bg-green-500" : "bg-yellow-600"
               } px-3 py-1 rounded-md`}
               onClick={handleCopyClick}
             >

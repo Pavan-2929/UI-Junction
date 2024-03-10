@@ -1,10 +1,13 @@
 import React from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { incrementCountFunction } from "../../redux/reducers/copySlice";
 
 function Footer() {
   const [copyMessage, setCopyMessage] = useState(false);
   const [name, setName] = useState("UI-Junction");
   const [newName, setNewName] = useState("");
+  const dispatch = useDispatch()
 
   const codeSnippet = `import React from "react";
 
@@ -26,6 +29,7 @@ export default Footer;
   const handleCopyClick = () => {
     navigator.clipboard.writeText(codeSnippet);
     setCopyMessage(true);
+    incrementCountFunction(dispatch)
     setTimeout(() => {
       setCopyMessage(false);
     }, 3000);
@@ -74,7 +78,7 @@ export default Footer;
             <h2 className="text-white font-bold">The code for the button</h2>
             <button
               className={`text-white ${
-                true ? "bg-green-500" : "bg-yellow-600"
+                copyMessage ? "bg-green-500" : "bg-yellow-600"
               } px-3 py-1 rounded-md`}
               onClick={handleCopyClick}
             >

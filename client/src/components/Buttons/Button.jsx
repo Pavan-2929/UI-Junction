@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { SketchPicker } from "react-color";
+import {useDispatch} from 'react-redux'
+import { incrementCountFunction } from "../../redux/reducers/copySlice";
 
 const Button = () => {
   const [color, setColor] = useState("#000000");
   const [showColorPicker, setShowColorPicker] = useState(false);
   const [showButton, setShowButton] = useState(false);
   const [copyMessage, setCopyMessage] = useState(false);
+  const dispatch = useDispatch();
 
   const toggleColorPicker = () => {
     setShowColorPicker(!showColorPicker);
@@ -14,12 +17,12 @@ const Button = () => {
   const handleColorChange = (newColor) => {
     setColor(newColor.hex);
   };
+  const codeSnippet = `<button className="px-4 py-2 rounded-md bg-${color} text-white hover:bg-yellow-700 transition duration-300 hover:opacity-75">Pick a Color</button>`;
 
   const handleCopyClick = () => {
-    navigator.clipboard.writeText(
-      `<button className="px-4 py-2 rounded-md bg-${color} text-white hover:bg-yellow-700 transition duration-300 hover:opacity-75">Pick a Color</button>`
-    );
+    navigator.clipboard.writeText(codeSnippet)
     setCopyMessage(true);
+    incrementCountFunction(dispatch)
     setTimeout(() => {
       setCopyMessage(false);
     }, 3000);
@@ -89,15 +92,13 @@ const Button = () => {
                 } px-3 py-1 rounded-md`}
                 onClick={handleCopyClick}
               >
-                {coppyMessage ? "Copied" : "Copy"}
+                {copyMessage ? "Copied" : "Copy"}
               </button>
             </div>
             <div className="bg-[#333] border border-gray-300 rounded-md p-4 overflow-auto text-white">
               <pre>
                 <code className="text-sm">
-                  {`<button class="px-4 py-2 rounded-md bg-${color} text-white hover:bg-yellow-700 transition duration-300 hover:opacity-75">
-  Pick a Color
-</button>`}
+                  {codeSnippet}
                 </code>
               </pre>
             </div>

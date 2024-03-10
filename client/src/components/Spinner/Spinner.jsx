@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { incrementCountFunction } from "../../redux/reducers/copySlice";
 
 function Spinner() {
   const [copyMessage, setCopyMessage] = useState(false);
+  const dispatch = useDispatch()
 
   const codeSnippet = `    <div className="flex items-center justify-center">
         <div className="w-12 h-12 rounded-full animate-spin spin-faster border-4 border-blue-500 border-t-transparent shadow-md"></div>
@@ -12,6 +15,7 @@ function Spinner() {
   const handleCopyClick = () => {
     navigator.clipboard.writeText(codeSnippet);
     setCopyMessage(true);
+    incrementCountFunction(dispatch())
     setTimeout(() => {
       setCopyMessage(false);
     }, 3000);
@@ -36,7 +40,7 @@ function Spinner() {
             <h2 className="text-white font-bold">The code for the Spinner</h2>
             <button
               className={`text-white ${
-                true ? "bg-green-500" : "bg-yellow-600"
+                copyMessage ? "bg-green-500" : "bg-yellow-600"
               } px-3 py-1 rounded-md`}
               onClick={handleCopyClick}
             >

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { incrementCountFunction } from "../../redux/reducers/copySlice";
 
 const Card = () => {
   const [copyMessage, setCopyMessage] = useState(false);
+  const dispatch = useDispatch()
 
   const posts = [
     {
@@ -102,6 +105,7 @@ export default CardComponent;`;
   const handleCopyClick = () => {
     navigator.clipboard.writeText(codeSnippet);
     setCopyMessage(true);
+    incrementCountFunction(dispatch)
     setTimeout(() => {
       setCopyMessage(false);
     }, 3000);
@@ -170,7 +174,7 @@ export default CardComponent;`;
             <h2 className="text-white font-bold">The code for the button</h2>
             <button
               className={`text-white ${
-                true ? "bg-green-500" : "bg-yellow-600"
+                copyMessage ? "bg-green-500" : "bg-yellow-600"
               } px-3 py-1 rounded-md`}
               onClick={handleCopyClick}
             >
