@@ -14,7 +14,7 @@ const Header = () => {
               to="/"
               className="hover:text-[#B69507] transition duration-300 ease-in-out"
             >
-              Home
+              Components
             </NavLink>
           </li>
           <li>
@@ -23,14 +23,6 @@ const Header = () => {
               className="hover:text-[#B69507] transition duration-300 ease-in-out"
             >
               Feedback
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className="hover:text-[#B69507] transition duration-300 ease-in-out"
-            >
-              About
             </NavLink>
           </li>
         </ul>

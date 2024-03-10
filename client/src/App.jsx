@@ -10,6 +10,8 @@ import Footer from "./components/Footer/Footer";
 import Spinner from "./components/Spinner/Spinner";
 import Contact from "./components/Contact/Contact";
 import Card from "./components/Card/Card";
+import Home from "./pages/Home";
+import Feedback from "./pages/Feedback";
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
           <Sidebar className="w-1/5" />
           <div className="flex-1">
             <Routes>
+              <Route path="/" element={<Home />} />
               <Route path="/button" element={<Button />} />
               <Route path="/accordion" element={<Accordion />} />
               <Route path="/navbar" element={<Navbar />} />
@@ -28,7 +31,8 @@ function App() {
               <Route path="/footer" element={<Footer />} />
               <Route path="/Spinner" element={<Spinner />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/card" element={<Card/>} />
+              <Route path="/card" element={<Card />} />
+              <Route path="/feedback" element={<Feedback />} />
             </Routes>
           </div>
         </div>
