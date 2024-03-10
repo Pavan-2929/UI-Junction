@@ -6,7 +6,9 @@ const Home = () => {
 
   const getCount = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/count/get");
+      const response = await axios.get(
+        "https://ui-junction-server.onrender.com/api/count/get"
+      );
 
       console.log(response);
       setCount(response.data.count);

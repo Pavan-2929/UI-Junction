@@ -16,7 +16,7 @@ const copySlice = createSlice({
 export const incrementCountFunction = async (dispatch) => {
   try {
     const response = await axios.post(
-      "http://localhost:3000/api/count/increment"
+      "https://ui-junction-server.onrender.com/api/count/increment"
     );
 
     dispatch(incrementCount(response.data.count));
