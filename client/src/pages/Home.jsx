@@ -22,7 +22,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center py-20 text-white border-l-2 border-white">
+    <div className="flex items-center justify-center py-10 text-white border-l-2 border-white">
       <div className="max-w-lg text-center">
         <h1 className="text-4xl font-bold mb-8">
           Welcome to <span className="text-yellow-400">UI-Junction</span>
